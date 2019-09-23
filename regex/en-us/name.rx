@@ -1,5 +1,8 @@
+# For translations, for the last item on name.rx,
+# edit the words for Negative Lookbehind from the
+# Connector.voc file
 \bfor.* (called|for|named) (?P<Name>.*)
 \b(called|for|named) (?P<Name>.*) for
 \b(called|for|named) (?P<Name>.*)
 \b^.*(a|of|the) (?P<Name>.*) timer
-\b^.* (?P<Name>.*)(?<!another)(?<!one more)(?<!a) timer$
+\b^.* (?P<Name>.*)(?<!a)(?<!an)(?<!the)(?<!another)(?<!one more)(?<!my)(?<!any)(?<!our) timer$
