@@ -1,0 +1,6 @@
+{
+	"utterance": "start a timer named pasta",
+	"intent_type": "start.timer.intent",
+	"expected_dialog": ["ask.how.long", "started.ordinal.timer.with.name"],
+	"responses": ["20 minutes"]
+}

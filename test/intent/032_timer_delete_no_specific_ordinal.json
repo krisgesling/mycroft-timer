@@ -1,0 +1,6 @@
+{
+	"utterance": "clear my timers",
+	"intent_type": "handle_cancel_timer",
+	"expected_dialog": ["ask.which.timer.cancel", "cancelled.timer"],
+	"responses": ["timer number 4"]
+}

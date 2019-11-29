@@ -1,0 +1,5 @@
+{
+	"utterance": "create a timer called linguine for 55 minutes",
+	"intent_type": "start.timer.intent",
+	"expected_dialog": "started.timer.with.name"
+}

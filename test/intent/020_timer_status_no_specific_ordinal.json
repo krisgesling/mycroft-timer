@@ -1,0 +1,6 @@
+{
+	"utterance": "list my timers",
+	"intent_type": "status.timer",
+	"expected_dialog": ["ask.which.timer", "time.remaining"],
+	"responses": ["the sixth timer"]
+}

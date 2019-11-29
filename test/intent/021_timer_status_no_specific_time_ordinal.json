@@ -1,0 +1,6 @@
+{
+	"utterance": "check my timers",
+	"intent_type": "status.timer",
+	"expected_dialog": ["ask.which.timer", "time.remaining.with.ordinal"],
+	"responses": ["second 20 minute timer"]
+}

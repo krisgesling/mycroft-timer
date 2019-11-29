@@ -1,0 +1,6 @@
+
+{	"utterance": "kill the timers",
+	"intent_type": "stop.timer.intent",
+	"expected_dialog": ["ask.which.timer.cancel", "ask.which.timer.cancel", "cancelled.timer"],
+	"responses": ["the 50 minute timers", "the second one"]
+}

@@ -1,0 +1,4 @@
+{
+	"utterance": "clear all timers",
+	"intent_type": "handle_cancel_timer"
+}

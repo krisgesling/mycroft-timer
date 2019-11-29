@@ -1,0 +1,6 @@
+{
+	"utterance": "remove my timers",
+	"intent_type": "handle_cancel_timer",
+	"expected_dialog": ["ask.which.timer.cancel", "cancelled.timer.with.ordinal"],
+	"responses": ["second 20 minute timer"]
+}

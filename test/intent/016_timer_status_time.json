@@ -1,0 +1,5 @@
+{
+	"utterance": "tell me status of the 30 minute timer",
+	"intent_type": "status.timer",
+	"expected_dialog": "time.remaining"
+}

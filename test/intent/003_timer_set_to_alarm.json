@@ -1,0 +1,6 @@
+{
+	"utterance": "set a timer for 25 hours",
+	"intent_type": "start.timer",
+	"expected_dialog": "timer.too.long.alarm.instead",
+	"responses": ["no"]
+}

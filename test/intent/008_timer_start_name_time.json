@@ -1,0 +1,5 @@
+{
+	"utterance": "I need a 1 hour timer for fettucine",
+	"intent_type": "start.timer",
+	"expected_dialog": "started.timer.with.name"
+}

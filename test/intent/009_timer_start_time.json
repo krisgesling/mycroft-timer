@@ -1,0 +1,5 @@
+{
+	"utterance": "ping me in 30 minutes",
+	"intent_type": "start.timer.intent",
+	"expected_dialog": "started.timer"
+}

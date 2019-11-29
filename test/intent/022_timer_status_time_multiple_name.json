@@ -1,0 +1,6 @@
+{
+	"utterance": "what's the status of the 20 minute timers",
+	"intent_type": "status.timer",
+	"expected_dialog": ["ask.which.timer", "time.remaining.named.with.ordinal"],
+	"responses": ["pasta"]
+}

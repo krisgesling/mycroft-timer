@@ -1,0 +1,6 @@
+{
+	"utterance": "when will my timer end",
+	"intent_type": "timer.status.intent",
+	"expected_dialog": ["ask.which.timer", "timer.not.found"],
+	"responses": ["the 11th timer"]
+}

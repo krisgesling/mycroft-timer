@@ -1,0 +1,5 @@
+{
+	"utterance": "do you have a timer named carbonara",
+	"intent_type": "status.timer.query",
+	"expected_dialog": "timer.not.found"
+}

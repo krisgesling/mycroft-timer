@@ -1,0 +1,5 @@
+{
+	"utterance": "kill all timers",
+	"intent_type": "stop.timer.intent",
+	"expected_dialog": "no.active.timer"
+}

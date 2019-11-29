@@ -1,0 +1,6 @@
+{
+	"utterance": "delete the 65 minute timer named pesto",
+	"intent_type": "handle_cancel_timer",
+	"expected_dialog": ["confirm.timer.to.cancel", "cancelled.single.timer"],
+	"responses": ["yes"]
+}

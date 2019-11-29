@@ -1,0 +1,5 @@
+{
+	"utterance": "do I have a 65 minute timer",
+	"intent_type": "status.timer.query",
+	"expected_dialog": "timer.not.found"
+}

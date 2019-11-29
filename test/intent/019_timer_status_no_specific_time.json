@@ -1,0 +1,6 @@
+{
+	"utterance": "how much time remaining on my timers",
+	"intent_type": "status.timer.query",
+	"expected_dialog": ["ask.which.timer", "time.remaining"],
+	"responses": ["30 minute timer"]
+}

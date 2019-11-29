@@ -1,0 +1,5 @@
+{
+	"utterance": "set a 45 minute timer",
+	"intent_type": "start.timer",
+	"expected_dialog": "started.timer"
+}

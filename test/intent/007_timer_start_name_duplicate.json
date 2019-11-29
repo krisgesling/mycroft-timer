@@ -1,0 +1,5 @@
+{
+	"utterance": "give me a 1 hour timer for pasta",
+	"intent_type": "start.timer",
+	"expected_dialog": "timer.duplicate.name"
+}

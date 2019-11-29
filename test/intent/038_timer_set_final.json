@@ -1,0 +1,5 @@
+{
+	"utterance": "start last timer for 20 minutes",
+	"intent_type": "start.timer.intent",
+	"expected_dialog": "started.timer"
+}

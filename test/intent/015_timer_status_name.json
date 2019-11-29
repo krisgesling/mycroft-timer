@@ -1,0 +1,5 @@
+{
+	"utterance": "what's the status of the fettucine timer",
+	"intent_type": "status.timer",
+	"expected_dialog": "time.remaining.named"
+}

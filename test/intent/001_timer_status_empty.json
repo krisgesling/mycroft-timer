@@ -1,0 +1,5 @@
+{
+	"utterance": "how's my timer",
+	"intent_type": "timer.status.intent",
+	"expected_dialog": "no.active.timer"
+}

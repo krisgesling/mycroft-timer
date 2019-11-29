@@ -1,0 +1,6 @@
+{
+	"utterance": "I want a timer disabled",
+	"intent_type": "handle_cancel_timer",
+	"expected_dialog": ["ask.which.timer.cancel", "cancelled.timer.named.with.ordinal"],
+	"responses": ["the pasta timer"]
+}

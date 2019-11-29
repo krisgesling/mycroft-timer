@@ -1,0 +1,6 @@
+{
+	"utterance": "what are my timers",
+	"intent_type": "status.timer.query",
+	"expected_dialog": ["ask.which.timer", "ask.which.timer", "time.remaining.with.ordinal"],
+	"responses": ["the 20 minute timers", "the second one"]
+}

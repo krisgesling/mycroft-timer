@@ -1,0 +1,6 @@
+{
+	"utterance": "timer",
+	"intent_type": "start.timer.intent",
+	"expected_dialog": ["ask.how.long", "started.timer"],
+	"responses": ["20 minutes"]
+}

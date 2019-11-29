@@ -1,0 +1,5 @@
+{
+	"utterance": "turn off the fettucine timer",
+	"intent_type": "handle_cancel_timer",
+	"expected_dialog": "cancelled.timer.named"
+}

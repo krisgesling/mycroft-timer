@@ -1,0 +1,5 @@
+{
+	"utterance": "status of the fourth timer",
+	"intent_type": "status.timer",
+	"expected_dialog": "time.remaining.named"
+}
