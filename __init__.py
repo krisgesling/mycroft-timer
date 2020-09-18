@@ -424,11 +424,11 @@ class TimerSkill(MycroftSkill):
         if timer["expires"] > now:
             # Timer still running
             remaining = (timer["expires"] - now).seconds
-            self.render_timer(idx, remaining)
+            self.render_timer(idx, remaining, timer)
         else:
             # Timer has expired but not been cleared, flash eyes
             overtime = (now - timer["expires"]).seconds
-            self.render_timer(idx, -overtime)
+            self.render_timer(idx, -overtime, timer)
 
             if timer["announced"]:
                 # beep again every 10 seconds
@@ -453,7 +453,7 @@ class TimerSkill(MycroftSkill):
                                             "ordinal": speakable_ord})
                 timer["announced"] = True
 
-    def render_timer(self, idx, seconds):
+    def render_timer(self, idx, seconds, timer=None):
         display_owner = self.enclosure.display_manager.get_active()
         if display_owner == "":
             self.enclosure.mouth_reset()  # clear any leftover bits
@@ -481,6 +481,8 @@ class TimerSkill(MycroftSkill):
         else:
             remaining_time = " " + remaining_time
 
+        self.show_timer_gui(remaining_time, expired, timer)
+
         if idx:
             # If there is an index to show, display at the left
             png = join(abspath(dirname(__file__)), "anim",
@@ -506,6 +508,17 @@ class TimerSkill(MycroftSkill):
                 x += 2
             else:
                 x += 4
+    
+    def show_timer_gui(self, time, expired, timer):
+        """Display very simple timer on GUI."""
+        duration = self._build_time_remaining_string(int(timer['duration']))
+        self.gui['duration'] = duration
+        self.gui['text'] = time
+        self.gui['expired'] = expired
+        if timer:
+            name = timer.get('name') or ''
+        self.gui['title'] = name.capitalize()
+        self.gui.show_page('Timer.qml')
 
     @staticmethod
     def _build_time_remaining_string(remaining_seconds):
@@ -740,6 +753,7 @@ class TimerSkill(MycroftSkill):
             # Timer is beeping requiring no confirmation reaction,
             # treat it like a stop button press
             self.stop()
+            self.gui.clear()
         elif message and message.data.get('utterance') == "cancel":
             # No expired timers to clear
             # Don't cancel active timers with only "cancel" as utterance
@@ -832,6 +846,7 @@ class TimerSkill(MycroftSkill):
             if len(self.active_timers) == 0:
                 self.timer_index = 0  # back to zero timers
             self.enclosure.eyes_on()  # reset just in case
+            self.gui.clear()
 
     def shutdown(self):
         # Clear the timer list, this fixes issues when stop() gets called
