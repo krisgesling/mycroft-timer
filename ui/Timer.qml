@@ -36,7 +36,7 @@ Mycroft.ProportionalDelegate {
         wrapMode: Text.Wrap
         font.family: "Noto Sans"
         font.weight: Font.Bold
-        text: Util.formatTime(timerFrame.timeRemaining)
+        text: Util.formatTime(timeRemaining)
     }
 
     Timer {
