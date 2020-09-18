@@ -481,7 +481,7 @@ class TimerSkill(MycroftSkill):
         else:
             remaining_time = " " + remaining_time
 
-        self.show_timer_gui(remaining_time, expired, timer)
+        # self.show_timer_gui(remaining_time, expired, timer)
 
         if idx:
             # If there is an index to show, display at the left
@@ -509,8 +509,10 @@ class TimerSkill(MycroftSkill):
             else:
                 x += 4
     
-    def show_timer_gui(self, time, expired, timer):
+    def show_timer_gui(self, time=None, expired=False, timer=None):
         """Display very simple timer on GUI."""
+        if timer and not time:
+            time = timer['duration']
         duration = self._build_time_remaining_string(int(timer['duration']))
         self.gui['duration'] = duration
         self.gui['text'] = time
@@ -679,6 +681,7 @@ class TimerSkill(MycroftSkill):
         self.enable_intent("handle_mute_timer")
         # Start showing the remaining time on the faceplate
         self.update_display(None)
+        self.show_timer_gui(timer=timer)
         # reset the mute flag with a new timer
         self.mute = False
 
