@@ -5,17 +5,20 @@ import org.kde.kirigami 2.4 as Kirigami
 
 import Mycroft 1.0 as Mycroft
 
+import "timer-util.js" as Util
+
 Mycroft.ProportionalDelegate {
-    id: systemTextFrame
+    id: timerFrame
     skillBackgroundColorOverlay: sessionData.expired ? "#DB406B" : "#40DBB0"
     property bool hasTitle: sessionData.title.length > 0 ? true : false
+    property var timeRemaining: sessionData.time_remaining
 
     Component.onCompleted: {
         console.log(hasTitle)
     }
 
     Mycroft.AutoFitLabel {
-        id: systemTextFrameTitle
+        id: timerName
         Layout.fillWidth: true
         Layout.preferredHeight: proportionalGridUnit * 20
         wrapMode: Text.Wrap
@@ -27,12 +30,17 @@ Mycroft.ProportionalDelegate {
     }
 
     Mycroft.AutoFitLabel {
-        id: systemTextFrameMainBody
+        id: timerCountdown
         Layout.fillWidth: true
         Layout.preferredHeight: proportionalGridUnit * 30
         wrapMode: Text.Wrap
         font.family: "Noto Sans"
         font.weight: Font.Bold
-        text: sessionData.text
+        text: Util.formatTime(timerFrame.timeRemaining)
+    }
+
+    Timer {
+        interval: 1000; running: true; repeat: true
+        onTriggered: timerCountdown.text = Util.countdown(timeRemaining)
     }
 }
