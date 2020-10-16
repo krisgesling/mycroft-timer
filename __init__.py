@@ -520,7 +520,7 @@ class TimerSkill(MycroftSkill):
         if timer:
             name = timer.get('name') or ''
         self.gui['title'] = name.capitalize()
-        self.gui.show_page('Timer.qml')
+        self.gui.show_page('Timer.qml', override_idle=True)
 
     @staticmethod
     def _build_time_remaining_string(remaining_seconds):
